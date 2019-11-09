@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tabletid:</strong>
+  <%= @tablet.Tabletid %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @tablet.name %>
+</p>
+
+<p>
+  <strong>Version:</strong>
+  <%= @tablet.version %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @tablet.model %>
+</p>
+
+<p>
+  <strong>Os:</strong>
+  <%= @tablet.OS %>
+</p>
+
+<p>
+  <strong>Vendor:</strong>
+  <%= @tablet.vendor %>
+</p>
+
+<%= link_to 'Edit', edit_tablet_path(@tablet) %> |
+<%= link_to 'Back', tablets_path %>

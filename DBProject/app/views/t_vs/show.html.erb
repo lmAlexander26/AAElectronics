@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tvid:</strong>
+  <%= @tv.TVid %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @tv.name %>
+</p>
+
+<p>
+  <strong>Version:</strong>
+  <%= @tv.version %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @tv.model %>
+</p>
+
+<p>
+  <strong>Vendor:</strong>
+  <%= @tv.vendor %>
+</p>
+
+<%= link_to 'Edit', edit_tv_path(@tv) %> |
+<%= link_to 'Back', tvs_path %>
