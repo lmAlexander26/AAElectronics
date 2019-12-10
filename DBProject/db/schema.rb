@@ -10,10 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191108150859) do
+ActiveRecord::Schema.define(version: 20191206213456) do
 
   create_table "addresses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci" do |t|
-    t.integer "Addressid"
     t.string "address"
     t.string "state"
     t.string "city"
@@ -23,7 +22,6 @@ ActiveRecord::Schema.define(version: 20191108150859) do
   end
 
   create_table "customers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci" do |t|
-    t.integer "Customerid"
     t.string "firstname"
     t.string "lastname"
     t.string "customeremail"
@@ -34,7 +32,6 @@ ActiveRecord::Schema.define(version: 20191108150859) do
   end
 
   create_table "employees", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci" do |t|
-    t.integer "Employeeid"
     t.string "firstname"
     t.string "lastname"
     t.string "department"
@@ -45,7 +42,6 @@ ActiveRecord::Schema.define(version: 20191108150859) do
   end
 
   create_table "invoices", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci" do |t|
-    t.integer "InvoiceNumber"
     t.string "username"
     t.integer "customerid"
     t.integer "addressid"
@@ -55,7 +51,6 @@ ActiveRecord::Schema.define(version: 20191108150859) do
   end
 
   create_table "laptops", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci" do |t|
-    t.integer "Laptopid"
     t.string "name"
     t.string "version"
     t.string "model"
@@ -66,7 +61,6 @@ ActiveRecord::Schema.define(version: 20191108150859) do
   end
 
   create_table "phones", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci" do |t|
-    t.integer "Phoneid"
     t.string "name"
     t.string "version"
     t.string "model"
@@ -77,7 +71,6 @@ ActiveRecord::Schema.define(version: 20191108150859) do
   end
 
   create_table "tablets", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci" do |t|
-    t.integer "Tabletid"
     t.string "name"
     t.string "version"
     t.string "model"
@@ -87,26 +80,17 @@ ActiveRecord::Schema.define(version: 20191108150859) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "tvs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci" do |t|
-    t.integer "TVid"
-    t.string "name"
-    t.string "version"
-    t.string "model"
-    t.string "vendor"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "usernames", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci" do |t|
+  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci" do |t|
     t.string "username"
+    t.string "email"
+    t.string "password_digest"
     t.integer "customerid"
-    t.string "password"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
   end
 
   create_table "vendor_pos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci" do |t|
-    t.integer "PurchaseOrder"
     t.integer "productid"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -121,7 +105,6 @@ ActiveRecord::Schema.define(version: 20191108150859) do
 
   create_table "vendors", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci" do |t|
     t.string "vendorname"
-    t.integer "Vendorid"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
