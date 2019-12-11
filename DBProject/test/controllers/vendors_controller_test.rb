@@ -17,7 +17,7 @@ class VendorsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create vendor" do
     assert_difference('Vendor.count') do
-      post vendors_url, params: { vendor: { Vendorid: @vendor.Vendorid, vendorname: @vendor.vendorname } }
+      post vendors_url, params: { vendor: { vendorname: @vendor.vendorname } }
     end
 
     assert_redirected_to vendor_url(Vendor.last)
@@ -34,7 +34,7 @@ class VendorsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update vendor" do
-    patch vendor_url(@vendor), params: { vendor: { Vendorid: @vendor.Vendorid, vendorname: @vendor.vendorname } }
+    patch vendor_url(@vendor), params: { vendor: { vendorname: @vendor.vendorname } }
     assert_redirected_to vendor_url(@vendor)
   end
 

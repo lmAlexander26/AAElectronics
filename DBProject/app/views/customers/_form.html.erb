@@ -4,36 +4,36 @@
       <h2><%= pluralize(customer.errors.count, "error") %> prohibited this customer from being saved:</h2>
 
       <ul>
-      <% customer.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+        <% customer.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
 
   <div class="field">
     <%= form.label :firstname %>
-    <%= form.text_field :firstname, id: :customer_firstname %>
+    <%= form.text_field :firstname %>
   </div>
 
   <div class="field">
     <%= form.label :lastname %>
-    <%= form.text_field :lastname, id: :customer_lastname %>
+    <%= form.text_field :lastname %>
   </div>
 
   <div class="field">
     <%= form.label :customeremail %>
-    <%= form.text_field :customeremail, id: :customer_customeremail %>
+    <%= form.text_field :customeremail %>
   </div>
 
   <div class="field">
     <%= form.label :phonenumber %>
-    <%= form.text_field :phonenumber, id: :customer_phonenumber %>
+    <%= form.text_field :phonenumber %>
   </div>
 
   <div class="field">
     <%= form.label :addressid %>
-    <%= form.number_field :addressid, id: :customer_addressid %>
+    <%= form.number_field :addressid %>
   </div>
 
   <div class="actions">

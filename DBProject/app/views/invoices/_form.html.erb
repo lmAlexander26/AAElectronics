@@ -4,31 +4,36 @@
       <h2><%= pluralize(invoice.errors.count, "error") %> prohibited this invoice from being saved:</h2>
 
       <ul>
-      <% invoice.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+        <% invoice.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
 
   <div class="field">
+    <%= form.label :InvoiceNumber %>
+    <%= form.number_field :InvoiceNumber %>
+  </div>
+
+  <div class="field">
     <%= form.label :username %>
-    <%= form.text_field :username, id: :invoice_username %>
+    <%= form.text_field :username %>
   </div>
 
   <div class="field">
     <%= form.label :customerid %>
-    <%= form.number_field :customerid, id: :invoice_customerid %>
+    <%= form.number_field :customerid %>
   </div>
 
   <div class="field">
     <%= form.label :addressid %>
-    <%= form.number_field :addressid, id: :invoice_addressid %>
+    <%= form.number_field :addressid %>
   </div>
 
   <div class="field">
     <%= form.label :productid %>
-    <%= form.number_field :productid, id: :invoice_productid %>
+    <%= form.number_field :productid %>
   </div>
 
   <div class="actions">

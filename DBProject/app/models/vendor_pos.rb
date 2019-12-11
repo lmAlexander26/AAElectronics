@@ -1,0 +1,2 @@
+class VendorPos < ApplicationRecord
+end

@@ -69,6 +69,6 @@ class TabletsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def tablet_params
-      params.require(:tablet).permit(:Tabletid, :name, :version, :model, :OS, :vendor)
+      params.require(:tablet).permit(:name, :version, :model, :OS, :vendor)
     end
 end

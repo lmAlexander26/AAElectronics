@@ -4,21 +4,16 @@
       <h2><%= pluralize(vendor_product.errors.count, "error") %> prohibited this vendor_product from being saved:</h2>
 
       <ul>
-      <% vendor_product.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+        <% vendor_product.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
 
   <div class="field">
-    <%= form.label :productid %>
-    <%= form.number_field :productid, id: :vendor_product_productid %>
-  </div>
-
-  <div class="field">
     <%= form.label :producttype %>
-    <%= form.text_field :producttype, id: :vendor_product_producttype %>
+    <%= form.text_field :producttype %>
   </div>
 
   <div class="actions">

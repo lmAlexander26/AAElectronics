@@ -6,7 +6,7 @@ class VendorPOsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get index" do
-    get vendor_pos_url
+    get vendor_pos_index_url
     assert_response :success
   end
 
@@ -16,11 +16,11 @@ class VendorPOsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should create vendor_po" do
-    assert_difference('VendorPo.count') do
-      post vendor_pos_url, params: { vendor_po: { PurchaseOrder: @vendor_po.PurchaseOrder, productid: @vendor_po.productid } }
+    assert_difference('VendorPos.count') do
+      post vendor_pos_index_url, params: { vendor_po: { PurchaseOrder: @vendor_po.PurchaseOrder } }
     end
 
-    assert_redirected_to vendor_po_url(VendorPo.last)
+    assert_redirected_to vendor_po_url(VendorPos.last)
   end
 
   test "should show vendor_po" do
@@ -34,15 +34,15 @@ class VendorPOsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update vendor_po" do
-    patch vendor_po_url(@vendor_po), params: { vendor_po: { PurchaseOrder: @vendor_po.PurchaseOrder, productid: @vendor_po.productid } }
+    patch vendor_po_url(@vendor_po), params: { vendor_po: { PurchaseOrder: @vendor_po.PurchaseOrder } }
     assert_redirected_to vendor_po_url(@vendor_po)
   end
 
   test "should destroy vendor_po" do
-    assert_difference('VendorPo.count', -1) do
+    assert_difference('VendorPos.count', -1) do
       delete vendor_po_url(@vendor_po)
     end
 
-    assert_redirected_to vendor_pos_url
+    assert_redirected_to vendor_pos_index_url
   end
 end

@@ -4,36 +4,36 @@
       <h2><%= pluralize(tablet.errors.count, "error") %> prohibited this tablet from being saved:</h2>
 
       <ul>
-      <% tablet.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+        <% tablet.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
 
   <div class="field">
     <%= form.label :name %>
-    <%= form.text_field :name, id: :tablet_name %>
+    <%= form.text_field :name %>
   </div>
 
   <div class="field">
     <%= form.label :version %>
-    <%= form.text_field :version, id: :tablet_version %>
+    <%= form.text_field :version %>
   </div>
 
   <div class="field">
     <%= form.label :model %>
-    <%= form.text_field :model, id: :tablet_model %>
+    <%= form.text_field :model %>
   </div>
 
   <div class="field">
     <%= form.label :OS %>
-    <%= form.text_field :OS, id: :tablet_OS %>
+    <%= form.text_field :OS %>
   </div>
 
   <div class="field">
     <%= form.label :vendor %>
-    <%= form.text_field :vendor, id: :tablet_vendor %>
+    <%= form.text_field :vendor %>
   </div>
 
   <div class="actions">

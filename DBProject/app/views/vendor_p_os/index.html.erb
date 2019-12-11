@@ -5,7 +5,7 @@
 <table>
   <thead>
     <tr>
-      <th>Productid</th>
+      <th>Purchaseorder</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -13,7 +13,7 @@
   <tbody>
     <% @vendor_pos.each do |vendor_po| %>
       <tr>
-        <td><%= vendor_po.productid %></td>
+        <td><%= vendor_po.PurchaseOrder %></td>
         <td><%= link_to 'Show', vendor_po %></td>
         <td><%= link_to 'Edit', edit_vendor_po_path(vendor_po) %></td>
         <td><%= link_to 'Destroy', vendor_po, method: :delete, data: { confirm: 'Are you sure?' } %></td>

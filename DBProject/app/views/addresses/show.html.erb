@@ -1,25 +1,26 @@
-<p id="notice"><%= notice %></p>
+<div class="container text-center">
+  <p id="notice"><%= notice %></p>
 
+  <p>
+    <strong>Address:</strong>
+    <%= @address.address %>
+  </p>
 
-<p>
-  <strong>Address:</strong>
-  <%= @address.address %>
-</p>
+  <p>
+    <strong>State:</strong>
+    <%= @address.state %>
+  </p>
 
-<p>
-  <strong>State:</strong>
-  <%= @address.state %>
-</p>
+  <p>
+    <strong>City:</strong>
+    <%= @address.city %>
+  </p>
 
-<p>
-  <strong>City:</strong>
-  <%= @address.city %>
-</p>
+  <p>
+    <strong>Zip:</strong>
+    <%= @address.zip %>
+  </p>
 
-<p>
-  <strong>Zip:</strong>
-  <%= @address.zip %>
-</p>
-
-<%= link_to 'Edit', edit_address_path(@address) %> |
-<%= link_to 'Back', addresses_path %>
+  <%= link_to 'Edit', edit_address_path(@address) %> |
+  <%= link_to 'Back', addresses_path %>
+</div>
