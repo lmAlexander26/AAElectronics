@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>Productid</th>
       <th>Producttype</th>
       <th colspan="3"></th>
     </tr>
@@ -13,6 +14,7 @@
   <tbody>
     <% @vendor_products.each do |vendor_product| %>
       <tr>
+        <td><%= vendor_product.productid %></td>
         <td><%= vendor_product.producttype %></td>
         <td><%= link_to 'Show', vendor_product %></td>
         <td><%= link_to 'Edit', edit_vendor_product_path(vendor_product) %></td>

@@ -1,6 +1,7 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  Laptopid: 1
   name: MyString
   version: MyString
   model: MyString
@@ -8,6 +9,7 @@ one:
   vendor: MyString
 
 two:
+  Laptopid: 1
   name: MyString
   version: MyString
   model: MyString

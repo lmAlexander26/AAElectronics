@@ -1,12 +1,14 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  Addressid: 1
   address: MyString
   state: MyString
   city: MyString
   zip: MyString
 
 two:
+  Addressid: 1
   address: MyString
   state: MyString
   city: MyString

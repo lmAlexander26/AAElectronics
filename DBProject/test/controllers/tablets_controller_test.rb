@@ -17,7 +17,7 @@ class TabletsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create tablet" do
     assert_difference('Tablet.count') do
-      post tablets_url, params: { tablet: { OS: @tablet.OS, model: @tablet.model, name: @tablet.name, vendor: @tablet.vendor, version: @tablet.version } }
+      post tablets_url, params: { tablet: { OS: @tablet.OS, Tabletid: @tablet.Tabletid, model: @tablet.model, name: @tablet.name, vendor: @tablet.vendor, version: @tablet.version } }
     end
 
     assert_redirected_to tablet_url(Tablet.last)
@@ -34,7 +34,7 @@ class TabletsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update tablet" do
-    patch tablet_url(@tablet), params: { tablet: { OS: @tablet.OS, model: @tablet.model, name: @tablet.name, vendor: @tablet.vendor, version: @tablet.version } }
+    patch tablet_url(@tablet), params: { tablet: { OS: @tablet.OS, Tabletid: @tablet.Tabletid, model: @tablet.model, name: @tablet.name, vendor: @tablet.vendor, version: @tablet.version } }
     assert_redirected_to tablet_url(@tablet)
   end
 

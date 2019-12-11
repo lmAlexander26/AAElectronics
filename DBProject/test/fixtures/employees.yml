@@ -1,6 +1,7 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  Employeeid: 1
   firstname: MyString
   lastname: MyString
   department: MyString
@@ -8,6 +9,7 @@ one:
   addressid: 1
 
 two:
+  Employeeid: 1
   firstname: MyString
   lastname: MyString
   department: MyString

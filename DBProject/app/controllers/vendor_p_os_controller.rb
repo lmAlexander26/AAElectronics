@@ -4,7 +4,7 @@ class VendorPOsController < ApplicationController
   # GET /vendor_pos
   # GET /vendor_pos.json
   def index
-    @vendor_pos = VendorPos.all
+    @vendor_pos = VendorPo.all
   end
 
   # GET /vendor_pos/1
@@ -14,7 +14,7 @@ class VendorPOsController < ApplicationController
 
   # GET /vendor_pos/new
   def new
-    @vendor_po = VendorPos.new
+    @vendor_po = VendorPo.new
   end
 
   # GET /vendor_pos/1/edit
@@ -24,11 +24,11 @@ class VendorPOsController < ApplicationController
   # POST /vendor_pos
   # POST /vendor_pos.json
   def create
-    @vendor_po = VendorPos.new(vendor_po_params)
+    @vendor_po = VendorPo.new(vendor_po_params)
 
     respond_to do |format|
       if @vendor_po.save
-        format.html { redirect_to @vendor_po, notice: 'Vendor pos was successfully created.' }
+        format.html { redirect_to @vendor_po, notice: 'Vendor po was successfully created.' }
         format.json { render :show, status: :created, location: @vendor_po }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class VendorPOsController < ApplicationController
   def update
     respond_to do |format|
       if @vendor_po.update(vendor_po_params)
-        format.html { redirect_to @vendor_po, notice: 'Vendor pos was successfully updated.' }
+        format.html { redirect_to @vendor_po, notice: 'Vendor po was successfully updated.' }
         format.json { render :show, status: :ok, location: @vendor_po }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class VendorPOsController < ApplicationController
   def destroy
     @vendor_po.destroy
     respond_to do |format|
-      format.html { redirect_to vendor_pos_index_url, notice: 'Vendor pos was successfully destroyed.' }
+      format.html { redirect_to vendor_pos_url, notice: 'Vendor po was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -64,11 +64,11 @@ class VendorPOsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_vendor_po
-      @vendor_po = VendorPos.find(params[:id])
+      @vendor_po = VendorPo.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def vendor_po_params
-      params.require(:vendor_po).permit(:PurchaseOrder)
+      params.require(:vendor_po).permit(:PurchaseOrder, :productid)
     end
 end

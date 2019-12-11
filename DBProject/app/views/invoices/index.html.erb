@@ -5,7 +5,6 @@
 <table>
   <thead>
     <tr>
-      <th>Invoicenumber</th>
       <th>Username</th>
       <th>Customerid</th>
       <th>Addressid</th>
@@ -17,7 +16,6 @@
   <tbody>
     <% @invoices.each do |invoice| %>
       <tr>
-        <td><%= invoice.InvoiceNumber %></td>
         <td><%= invoice.username %></td>
         <td><%= invoice.customerid %></td>
         <td><%= invoice.addressid %></td>

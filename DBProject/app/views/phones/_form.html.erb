@@ -4,36 +4,36 @@
       <h2><%= pluralize(phone.errors.count, "error") %> prohibited this phone from being saved:</h2>
 
       <ul>
-        <% phone.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
+      <% phone.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
       </ul>
     </div>
   <% end %>
-
+  
   <div class="field">
     <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, id: :phone_name %>
   </div>
 
   <div class="field">
     <%= form.label :version %>
-    <%= form.text_field :version %>
+    <%= form.text_field :version, id: :phone_version %>
   </div>
 
   <div class="field">
     <%= form.label :model %>
-    <%= form.text_field :model %>
+    <%= form.text_field :model, id: :phone_model %>
   </div>
 
   <div class="field">
     <%= form.label :OS %>
-    <%= form.text_field :OS %>
+    <%= form.text_field :OS, id: :phone_OS %>
   </div>
 
   <div class="field">
     <%= form.label :vendor %>
-    <%= form.text_field :vendor %>
+    <%= form.text_field :vendor, id: :phone_vendor %>
   </div>
 
   <div class="actions">

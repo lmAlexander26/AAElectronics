@@ -17,7 +17,7 @@ class VendorProductsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create vendor_product" do
     assert_difference('VendorProduct.count') do
-      post vendor_products_url, params: { vendor_product: { producttype: @vendor_product.producttype } }
+      post vendor_products_url, params: { vendor_product: { productid: @vendor_product.productid, producttype: @vendor_product.producttype } }
     end
 
     assert_redirected_to vendor_product_url(VendorProduct.last)
@@ -34,7 +34,7 @@ class VendorProductsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update vendor_product" do
-    patch vendor_product_url(@vendor_product), params: { vendor_product: { producttype: @vendor_product.producttype } }
+    patch vendor_product_url(@vendor_product), params: { vendor_product: { productid: @vendor_product.productid, producttype: @vendor_product.producttype } }
     assert_redirected_to vendor_product_url(@vendor_product)
   end
 

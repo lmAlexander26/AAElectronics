@@ -17,7 +17,7 @@ class LaptopsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create laptop" do
     assert_difference('Laptop.count') do
-      post laptops_url, params: { laptop: { OS: @laptop.OS, model: @laptop.model, name: @laptop.name, vendor: @laptop.vendor, version: @laptop.version } }
+      post laptops_url, params: { laptop: { Laptopid: @laptop.Laptopid, OS: @laptop.OS, model: @laptop.model, name: @laptop.name, vendor: @laptop.vendor, version: @laptop.version } }
     end
 
     assert_redirected_to laptop_url(Laptop.last)
@@ -34,7 +34,7 @@ class LaptopsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update laptop" do
-    patch laptop_url(@laptop), params: { laptop: { OS: @laptop.OS, model: @laptop.model, name: @laptop.name, vendor: @laptop.vendor, version: @laptop.version } }
+    patch laptop_url(@laptop), params: { laptop: { Laptopid: @laptop.Laptopid, OS: @laptop.OS, model: @laptop.model, name: @laptop.name, vendor: @laptop.vendor, version: @laptop.version } }
     assert_redirected_to laptop_url(@laptop)
   end
 

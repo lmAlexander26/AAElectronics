@@ -4,36 +4,36 @@
       <h2><%= pluralize(employee.errors.count, "error") %> prohibited this employee from being saved:</h2>
 
       <ul>
-        <% employee.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
+      <% employee.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
       </ul>
     </div>
   <% end %>
 
   <div class="field">
     <%= form.label :firstname %>
-    <%= form.text_field :firstname %>
+    <%= form.text_field :firstname, id: :employee_firstname %>
   </div>
 
   <div class="field">
     <%= form.label :lastname %>
-    <%= form.text_field :lastname %>
+    <%= form.text_field :lastname, id: :employee_lastname %>
   </div>
 
   <div class="field">
     <%= form.label :department %>
-    <%= form.text_field :department %>
+    <%= form.text_field :department, id: :employee_department %>
   </div>
 
   <div class="field">
     <%= form.label :role %>
-    <%= form.text_field :role %>
+    <%= form.text_field :role, id: :employee_role %>
   </div>
 
   <div class="field">
     <%= form.label :addressid %>
-    <%= form.number_field :addressid %>
+    <%= form.number_field :addressid, id: :employee_addressid %>
   </div>
 
   <div class="actions">

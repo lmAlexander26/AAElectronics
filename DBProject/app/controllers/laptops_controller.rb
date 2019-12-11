@@ -69,6 +69,6 @@ class LaptopsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def laptop_params
-      params.require(:laptop).permit(:name, :version, :model, :OS, :vendor)
+      params.require(:laptop).permit(:Laptopid, :name, :version, :model, :OS, :vendor)
     end
 end
