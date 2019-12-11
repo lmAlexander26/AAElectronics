@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Phoneid: 1
+  name: MyString
+  version: MyString
+  model: MyString
+  OS: MyString
+  vendor: MyString
+
+two:
+  Phoneid: 1
+  name: MyString
+  version: MyString
+  model: MyString
+  OS: MyString
+  vendor: MyString

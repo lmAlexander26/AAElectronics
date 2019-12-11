@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @laptop.name %>
+</p>
+
+<p>
+  <strong>Version:</strong>
+  <%= @laptop.version %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @laptop.model %>
+</p>
+
+<p>
+  <strong>Os:</strong>
+  <%= @laptop.OS %>
+</p>
+
+<p>
+  <strong>Vendor:</strong>
+  <%= @laptop.vendor %>
+</p>
+
+<%= link_to 'Edit', edit_laptop_path(@laptop) %> |
+<%= link_to 'Back', laptops_path %>

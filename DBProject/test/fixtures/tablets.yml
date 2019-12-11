@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Tabletid: 1
+  name: MyString
+  version: MyString
+  model: MyString
+  OS: MyString
+  vendor: MyString
+
+two:
+  Tabletid: 1
+  name: MyString
+  version: MyString
+  model: MyString
+  OS: MyString
+  vendor: MyString
